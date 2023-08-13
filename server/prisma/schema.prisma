@@ -1,0 +1,91 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Contacts {
+  id Int @id @default(autoincrement())
+  mobile String
+  email String
+  whatsapp String
+  telegram String
+  viber String
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+  title String @unique
+  shortDescription String
+  fullDescription String
+  image String
+  price Int
+  instruction String
+
+  code Code[]
+  licenses License[]
+
+  group Group @relation(fields: [groupTitle], references: [title])
+  groupTitle String
+}
+
+model Code {
+  id Int @id @default(autoincrement())
+  value String @unique
+
+  product Product @relation(fields: [productTitle], references: [title], onDelete: Cascade)
+  productTitle String
+
+  isBuyed Boolean @default(false)
+
+  license License?
+  inOrder Order?
+  inActivations Activation[]
+  paymentData String?
+}
+
+model License {
+  id Int @id @default(autoincrement())
+  value String
+
+  product Product @relation(fields: [productTitle], references: [title], onDelete: Cascade)
+  productTitle String
+
+  code Code? @relation(fields: [codeId], references: [id], onDelete: Cascade)
+  codeId Int? @unique
+
+  isBuyed Boolean @default(false)
+}
+
+model Order {
+  id Int @id @default(autoincrement())
+
+  code Code @relation(fields: [codeId], references: [id], onDelete: Cascade)
+  codeId Int @unique
+
+  phone String
+  date String
+
+  isDone Boolean @default(false)
+}
+
+model Activation {
+  id Int @id @default(autoincrement())
+
+  code Code @relation(fields: [codeId], references: [id], onDelete: Cascade)
+  codeId Int
+
+  date String
+}
+
+model Group {
+  id Int @id @default(autoincrement())
+  title String @unique
+  products Product[]
+}

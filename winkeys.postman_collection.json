@@ -1,0 +1,775 @@
+{
+	"info": {
+		"_postman_id": "b7b828c7-ab20-4dd5-b4ee-b277857caebf",
+		"name": "winkeys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25342866"
+	},
+	"item": [
+		{
+			"name": "contacts",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newValue\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/contact/mobile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contact",
+								"mobile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"PRODUCT3\",\n    \"shortDescription\": \"description short 1\",\n    \"fullDescription\": \"description full 1\",\n    \"image\": \"https://i.ibb.co/6yKL15D/image.png\",\n    \"instruction\": \"<p>ints<p>\",\n    \"price\": 1000,\n    \"groupTitle\": \"GROUP2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "S5iei5eeiwwaisd98_$858$$78dsssr7zs7",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"title\": \"Продукт 1\",\n    \"shortDescription\": \"description 1\",\n    \"fullDescription\": \"description 1\",\n    \"image\": \"https://google.com\",\n    \"instruction\": \"<p>INSTUCTION<p> <a href='lol'>dddd</a>\",\n    \"price\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/product/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "license",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "create codes",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "S5iei5eeiwwaisd98_$858$$78dsssr7zs7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codes\": [\n        {\n            \"productTitle\": \"Продукт 1\",\n            \"value\": \"CODE33\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/code",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create licenses (по группам)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"licenses\": [\n        {\n            \"groupTitle\": \"GROUP1\",\n            \"value\": \"LICENSE1\"\n        },\n        {\n            \"groupTitle\": \"GROUP1\",\n            \"value\": \"LICENSE1\"\n        },\n        {\n            \"groupTitle\": \"GROUP1\",\n            \"value\": \"LICENSE2\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/byGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"byGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create licenses (одиночно)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"licenses\": [\n        {\n            \"productTitle\": \"PRODUCT3\",\n            \"value\": \"LICENSE2\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/solo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"solo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "activation history",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/license/history/activations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"history",
+										"activations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "orders history",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/license/history/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"history",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create with relations",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "S5iei5eeiwwaisd98_$858$$78dsssr7zs7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"values\": [\n        {\n            \"code\": \"ff\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"a\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"3\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"dwdw\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"q\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"gg\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"b\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"hhrfx\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"ffds\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"tvrrecc\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"jyvtvhcrtcegr\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"cegrcegr\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"cegrcegrcegrcger\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"jy\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"codrgrgrggrgre1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"csaadfsfdfode2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"code1gegrgrgr\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"code2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"codfsfsfse1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"caaaaaode2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"coddddddddddddddde1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"codffffffffffffffffe2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"codvvvvvvvvvvvve1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"codebbbbbbbb2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"codeggggggggggggggggg1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"connnnde2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"coefefefefefvvvvvvvvvvvvvvvvvvvvvvvvvvvvde1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"cofefeeevsvfdde2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"cojuujjude1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"codeokmgfds2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"code12453566\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"code29989\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"cod898e1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"co655de2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"cod13431e1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"co4241144114de2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"co4334344fde1\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"codf34fcfrd22e2\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"42c2c4242\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"42scss\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"cdcd343\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"cs42442\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"242ccc\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"424fffef\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        },\n                {\n            \"code\": \"4424fdffdfd\",\n            \"license\": \"license1\",\n            \"product\": \"PRODUCT\"\n        },\n        {\n            \"code\": \"424fffd\",\n            \"license\": \"license2\",\n            \"product\": \"PRODUCT\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/createWithRelation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"createWithRelation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete codes",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "S5iei5eeiwwaisd98_$858$$78dsssr7zs7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"values\": [\"code1\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/deleteCodes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"deleteCodes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete licenses",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"values\": [\"LICENSE2\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/deleteLicenses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"deleteLicenses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "client",
+					"item": [
+						{
+							"name": "activation code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/license/activate/067B732F",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"activate",
+										"067B732F"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"productId\": 1,\n    \"phone\": \"4424242\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/license/buy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"buy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/license/buCode/:code",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"license",
+										"buCode",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "замена ответу от лавы про умпешный платеж, order_id - код активации (при buy он в ссылке)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payment_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/license/webhook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"license",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "groups",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/group",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"GROUP3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/group",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"GROUP3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/group/GROUP3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"group",
+								"GROUP3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by title",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"GROUP3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/group/GROUP1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"group",
+								"GROUP1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
